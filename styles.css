@@ -170,11 +170,12 @@ body {
 }
 
 .text-container button:hover {
+  color: var(--heading-color);
   background: var(--btn-text-color-active);
 }
 
 .text-container button:active {
-  transform: scale(0.99);
+  transform: scale(0.98);
 }
 
 
@@ -211,7 +212,8 @@ body {
 }
 
 .attribution a { 
-  color: hsl(301, 89%, 68%); 
+  color: hsl(49, 100%, 49%); 
+  font-weight: 600;
 }
 
 
@@ -234,17 +236,20 @@ body {
     width: 200px;
   }
   .parent-container {
-    min-width: 1280px;
+    margin: 20px;
+    max-width: 1270px;
     display: flex;
   }
 
   .hero-container {
-    max-width: 696px;
+    /* max-width: 696px; */
+    flex: 1 0 50%;
   }
 
   .text-container {
+    flex: 1 1 50%;
     padding-left: 60px;
-    max-width: 525px;
+    /* max-width: 525px; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -263,15 +268,21 @@ body {
   }
   
   .text-container button {
-    font-size: 1rem;
+    font-size: .75rem;
     margin-top: 24px;
     padding: 20px 76px;
     border-radius: 31px;
   }
 
   .social-icons {
-    margin: 26px 0px 10px;
+    margin: 0;
+    padding: 26px;
     justify-content: end;
+  }
+
+  .social-icons i {
+    transition: color 200ms ease-in-out;
+    transition: border 200ms ease-in-out;
   }
 
   .social-icons i:hover {
@@ -280,7 +291,7 @@ body {
   }
   
   .social-icons i:active {
-    transform: scale(0.99);
+    transform: scale(0.98);
   }
 
   .fa-brands {
